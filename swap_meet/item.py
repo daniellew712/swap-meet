@@ -6,6 +6,11 @@ class Item:
 
         if not id:
             id = uuid.uuid4().int
+
+        try:
+            item = isinstance(id, int)
+        except TypeError as err:
+            print(f"An Type error occurred, please enter a integer.")
             
         self.id = id
         self.condition = condition
